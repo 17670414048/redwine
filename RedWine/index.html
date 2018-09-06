@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta http-equiv="Cache-Control" content="no-cache"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>首页</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- 当启动webapp功能时，显示手机信号、时间、电池的顶部导航栏的颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）。这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- 忽略页面中的数字识别为电话号码、email识别 -->
+		<meta name="format-detection" content="telephone=no, email=no">
+		<!-- 启用360浏览器的极速模式(webkit) -->
+		<meta name="renderer" content="webkit">
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+		<meta name="HandheldFriendly" content="true">
+		<!-- 微软的老式浏览器 -->
+		<meta name="MobileOptimized" content="320">
+		<!-- uc强制竖屏 -->
+		<meta name="screen-orientation" content="portrait">
+		<!-- QQ强制竖屏 -->
+		<meta name="x5-orientation" content="portrait">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<!-- 网页不会被缓存 -->
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<link rel="shortcut icon" href="/favicon.ico"/>
+		<script type="text/javascript" src="js/rem.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/static.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<style>
+		input{
+		  box-sizing:border-box;
+		  vertical-align:middle;
+		}
+	</style>
+	</head>
+	<body>
+				<!-- 主界面移动、菜单不动 -->
+	<div class="mui-off-canvas-wrap mui-draggable">
+		<!-- 主页面容器 -->
+	  <div class="mui-inner-wrap">
+			<!-- 主页面标题 -->
+			<!-- 主页面标题 -->
+			<header class="mui-bar mui-bar-nav">
+		<!--	<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"  href="#offCanvasSide" ></a>
+		-->	<h1 class="mui-title">首页</h1>
+			</header>
+			<nav class="mui-bar mui-bar-tab">
+				<a href="index.html" class="mui-tab-item mui-active">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				
+				<a href="order.html" class="mui-tab-item">
+					<span class="mui-icon mui-icon-order"></span>
+					<span class="mui-tab-label">订单</span>
+				</a>
+				<a href="myCenter.html" class="mui-tab-item">
+					<span class="mui-icon mui-icon-mine"></span>
+					<span class="mui-tab-label">我的</span>
+				</a>
+			</nav>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<!--这里放置真实显示的DOM内容-->
+					<div id="slider" class="mui-slider slider-first-index">
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="img/banner.png">
+								</a>
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="img/banner.png">
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="img/banner.png">
+								</a>
+							</div>
+							<!-- 第三张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="img/banner.png">
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#">
+									<img src="img/banner.png">
+								</a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+					<div class="notice">
+						<img src="img/icon_horn.png" alt="通知"/>
+						<div class="notice-list">
+						<p>通知:审计活动正在火热进行中</p>
+						</div>
+					</div>
+					<!--<div class="mui-full-back"></div>-->
+					<ul class="mui-table-view index-list-view" id="list">
+							<li class="mui-table-view-cell mui-collapse-content">
+								  <div class="list-content">
+										<img src="img/order_img.png" class="list-img"/>
+										<div class="list-pay">
+											<h5>法国进口波尔多红酒</h5>
+											<div class="number">
+												 <div class="mui-input-group good-number add-odd mui-left">
+													<span style="float:left;">数量&nbsp;&nbsp;&nbsp;</span>
+													<p class="del-index">-<input type="button" class="addon icon-minus input-index" id="del1" onclick="del(1)" /></p>
+													<p class="center-index">
+													<input type="number" class="input-index input-num" id="amount1" name="amount" value="1" readonly="readonly"/>
+													</p>
+													<p class="add-index">+<input type="button" class="addon icon-plus input-index" id="add1" onclick="add(1)" /></p>
+													<!--<span class="addon text-red">¥<span id="totalMoney">235.00</span>元</span>-->
+													<!-- <input type="hidden" value="398" name="money" id="money-project" /> -->
+												 </div>
+					                        </div>
+											<p class="price">价格&nbsp;&nbsp;<span>￥398</span></p>
+											<button type="button" class="index-btn" onclick="go_detail();">购买</button>
+										</div>				
+									</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse-content">
+									<div class="list-content">
+										<img src="img/order_img.png" class="list-img"/>
+										<div class="list-pay">
+											<h5>法国进口波尔多红酒</h5>
+											<div class="number">
+												<div class="mui-input-group good-number add-odd mui-left">
+													<span style="float:left;">数量&nbsp;&nbsp;&nbsp;</span>
+													<p class="del-index">-<input type="button" class="addon icon-minus input-index" id="del2" onclick="del(2)" /></p>
+													<p class="center-index">
+													<input type="number" class="input-index input-num" id="amount2" name="amount" value="1" readonly="readonly"/>
+													</p>
+													<p class="add-index">+<input type="button" class="addon icon-plus input-index" id="add2" onclick="add(2)" /></p>
+													<!--<span class="addon text-red">¥<span id="totalMoney">235.00</span>元</span>-->
+													<!-- <input type="hidden" value="398" name="money" id="money-project" /> -->
+												</div>
+											</div>
+											<p class="price">价格&nbsp;&nbsp;<span>￥398</span></p>
+											<button  class="index-btn" onclick="go_detail();">购买</button>
+										</div>				
+									</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse-content">
+									<div class="list-content">
+										<img src="img/order_img.png" class="list-img"/>
+										<div class="list-pay">
+											<h5>法国进口波尔多红酒</h5>
+											<div class="number">
+												<div class="mui-input-group good-number add-odd mui-left">
+													<span style="float:left;">数量&nbsp;&nbsp;&nbsp;</span>
+													<p class="del-index">-<input type="button" class="addon icon-minus input-index" id="del3" onclick="del(3)" /></p>
+													<p class="center-index">
+													<input type="number" class="input-index input-num" id="amount3" name="amount" value="1" readonly="readonly"/>
+													</p>
+													<p class="add-index">+<input type="button" class="addon icon-plus input-index" id="add3" onclick="add(3)" /></p>
+													<!--<span class="addon text-red">¥<span id="totalMoney">235.00</span>元</span>-->
+													<!-- <input type="hidden" value="398" name="money" id="money-project" /> -->
+												</div>
+											</div>
+											<p class="price">价格&nbsp;&nbsp;<span>￥398</span></p>
+											<button  class="index-btn" onclick="go_detail();">购买</button>
+										</div>				
+									</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse-content">
+									<div class="list-content">
+										<img src="img/order_img.png" class="list-img"/>
+										<div class="list-pay">
+											<h5>法国进口波尔多红酒</h5>
+											<div class="number">
+												<div class="mui-input-group good-number add-odd mui-left">
+													<span style="float:left;">数量&nbsp;&nbsp;&nbsp;</span>
+													<p class="del-index">-<input type="button" class="addon icon-minus input-index" id="del4" onclick="del(4)" /></p>
+													<p class="center-index">
+													<input type="number" class="input-index input-num" id="amount4" name="amount" value="1" readonly="readonly"/>
+													</p>
+													<p class="add-index">+<input type="button" class="addon icon-plus input-index" id="add4" onclick="add(4)" /></p>
+													<!--<span class="addon text-red">¥<span id="totalMoney">235.00</span>元</span>-->
+													<!-- <input type="hidden" value="398" name="money" id="money-project" /> -->
+												</div>
+											</div>
+											<p class="price">价格&nbsp;&nbsp;<span>￥398</span></p>
+											<button  class="index-btn" onclick="go_detail();">购买</button>
+										</div>				
+									</div>
+							</li>
+						</ul>
+					<div class="mui-full-back"></div>
+				</div>
+			</div>
+			<div class="mui-off-canvas-backdrop"></div>
+		</div>
+	</div>
+	
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+				//初始化mui
+				mui.init();
+			
+			//通知栏动态事件
+// 			var textWidth = $('.notice-list p').width();
+// 			var num = $('.notice-list').children('p').length;
+// 			var i=-textWidth*(num-1);
+        var i=0;
+		    var timer = setTimeout(marquee, 1000);
+				function marquee() {
+						var  totalWidth = $('.notice').width();
+						var scrollWidth = $('.notice-list').width();
+						var textWidth = $('.notice-list p').width();
+						var num = $('.notice-list').children('p').length;
+						// i = -scrollWidth;
+						setInterval(function() {
+								i++;
+								if(i > scrollWidth) {
+										i = -textWidth;
+										$('.notice-list p').animate({'right': -i/50+'rem'}, 20);
+								}
+								$('.notice-list p').animate({'right': -i/50+'rem'}, 20);
+								//console.log(i);
+						}, 20);
+						//console.log(scrollWidth );
+				}
+					//购买事件
+				function go_detail(){
+						window.location.href="goodsDetail.html";
+					}
+			
+// 				var dlist = document.getElementById("list");
+// 				var num = dlist.length;
+// 				var num = $("#list li").length;
+// 				console.log(num);
+				//增加份数
+				function add(num) {
+					var num_add = parseInt($("#amount"+num).val()) + 1;
+					if($("#amount"+num).val() == "") {
+						num_add = 1;
+					}
+		
+					$("#amount"+num).val(num_add);
+				}
+				//减少份数
+				function del(num) {
+					var num_dec = parseInt($("#amount"+num).val()) - 1;
+					if(num_dec < 1) {
+						mui.toast("最少1份");
+					} else {
+						$("#amount"+num).val(num_dec);
+					}
+				}
+
+		</script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lunbo.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
